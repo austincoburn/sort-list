@@ -8,7 +8,7 @@ public class App {
     
     }
 
-    private static List<?> flattenList(List<List<?>> list) {
+    public List<?> flattenList(List<List<?>> list) {
         List<?> result = list.stream().flatMap(Collection::stream).filter(Objects::nonNull).collect(Collectors.toList());
         return result;
     }
